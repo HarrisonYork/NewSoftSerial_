@@ -38,7 +38,7 @@ http://arduiniana.org.
 #include <avr/pgmspace.h>
 #include "Arduino.h"
 #include "pins_arduino.h"
-#include "NewSoftSerial.h"
+#include "NewSoftSerialY.h"
 
 // Abstractions for maximum portability between processors
 // These are macros to associate pins to pin change interrupts
