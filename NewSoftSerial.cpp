@@ -458,10 +458,10 @@ uint8_t NewSoftSerial::available(void)
   return (_receive_buffer_tail + _NewSS_MAX_RX_BUFF - _receive_buffer_head) % _NewSS_MAX_RX_BUFF;
 }
 
-void NewSoftSerial::write(uint8_t b)
+size_t NewSoftSerial::write(uint8_t b)
 {
   if (_tx_delay == 0)
-    return;
+    return 0;
 
   activate();
 
@@ -504,6 +504,7 @@ void NewSoftSerial::write(uint8_t b)
 
   SREG = oldSREG; // turn interrupts back on
   tunedDelay(_tx_delay);
+  return 1;
 }
 
 #if !defined(cbi)
