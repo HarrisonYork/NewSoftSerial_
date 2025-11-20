@@ -36,7 +36,7 @@ http://arduiniana.org.
 // 
 #include <avr/interrupt.h>
 #include <avr/pgmspace.h>
-#include "WConstants.h"
+#include "Arduino.h"
 #include "pins_arduino.h"
 #include "NewSoftSerial.h"
 
