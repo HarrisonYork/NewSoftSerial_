@@ -1,4 +1,4 @@
-#include <NewSoftSerialY.h>
+#include <NewSoftSerial.h>
 
 NewSoftSerial nss(2, 3);
 NewSoftSerial nss2(4, 5);
